@@ -7,14 +7,14 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
+  public data:any;
   constructor(public apiService:ApiService){
     this.getData().then((products)=>{
       console.log(products);
     }) 
   }
   public async getData(){
-    let data = await this.apiService.getProducts()
-    return data
+    this.data = await this.apiService.getProducts()
+    return this.data
   }
 }
