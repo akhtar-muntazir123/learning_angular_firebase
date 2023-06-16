@@ -1,0 +1,49 @@
+<form [formGroup]="form">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="mb-3">
+            <label for="name" class="form-label">name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              formControlName="name"
+              [ngModel]="productData.name"
+            />
+       
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="mb-3">
+            <label for="description" class="form-label">description</label>
+            <input
+              type="text"
+              class="form-control"
+              id="description"
+              formControlName="description"
+              [ngModel]="productData.description"
+            />
+           </div>
+        </div>
+  
+        <div class="col-12">
+          <div class="mb-3">
+            <label for="price" class="form-label">price</label>
+            <input
+              type="number"
+              class="form-control"
+              id="price"
+              formControlName="price"
+              [ngModel]="productData.price"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <button type="submit" class="btn btn-primary" (click)="submit()" routerLink="" >
+      EDIT
+    </button>
+  </form>
+  
